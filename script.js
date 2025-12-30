@@ -127,7 +127,7 @@ class VirgilianLots {
         }, 100);
 
         // Update button text
-        this.elements.getLineBtn.querySelector('.btn-text').textContent = 'Request Another Lot';
+        this.elements.getLineBtn.querySelector('.btn-text').textContent = 'Consult Again';
     }
 
     setLoading(loading) {
@@ -155,15 +155,7 @@ class VirgilianLots {
         if (!errorDiv) {
             errorDiv = document.createElement('div');
             errorDiv.id = 'error-message';
-            errorDiv.style.cssText = `
-                background: #fee;
-                color: #c33;
-                padding: 15px;
-                border-radius: 8px;
-                margin: 20px 0;
-                text-align: center;
-                border: 1px solid #fcc;
-            `;
+            errorDiv.className = 'error-message';
             document.querySelector('.divination-section').appendChild(errorDiv);
         }
         
@@ -184,26 +176,13 @@ class VirgilianLots {
     reset() {
         this.currentLine = null;
         this.elements.resultContainer.classList.add('hidden');
-        this.elements.getLineBtn.querySelector('.btn-text').textContent = 'Request Your Virgilian Lot';
+        this.elements.getLineBtn.querySelector('.btn-text').textContent = 'Consult the Oracle';
     }
 }
 
 // Initialize the application when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     window.virgilianLots = new VirgilianLots();
-    
-    // Add some accessibility features
-    document.body.setAttribute('tabindex', '0');
-    
-    // Add focus styles for keyboard navigation
-    const style = document.createElement('style');
-    style.textContent = `
-        button:focus-visible {
-            outline: 2px solid #667eea;
-            outline-offset: 2px;
-        }
-    `;
-    document.head.appendChild(style);
 });
 
 // Service worker registration for PWA capabilities (optional)

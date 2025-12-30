@@ -6,30 +6,39 @@
     <title>Sortes Vergilianae - Virgilian Lots</title>
     <meta
       name="description"
-      content="Ancient Roman divination using Virgil's Aeneid. Get guidance from randomly selected passages."
+      content="Ancient Roman divination using Virgil's Aeneid. Seek guidance from randomly selected passages of this timeless epic."
     />
-    <meta name="theme-color" content="#667eea" />
+    <meta name="theme-color" content="#0a0a14" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Animated Starfield Background -->
+    <div class="stars-container" aria-hidden="true">
+      <div class="stars stars-layer-1"></div>
+      <div class="stars stars-layer-2"></div>
+      <div class="stars stars-layer-3"></div>
+    </div>
+
     <div class="container">
       <header>
         <h1>Sortes Vergilianae</h1>
-        <p class="subtitle">Virgilian Lots - Ancient Roman Divination</p>
+        <p class="subtitle">Virgilian Lots &mdash; Ancient Roman Divination</p>
       </header>
 
       <main>
         <section class="intro">
           <p>
-            Think of a question or issue in your life, then request a random
-            line from Virgil's <em>Aeneid</em> for guidance.
+            Think of a question or concern in your life, then request a passage
+            from Virgil's <em>Aeneid</em> for guidance.
           </p>
         </section>
 
         <section class="divination-section">
           <button id="getLine" class="btn-primary">
-            <span class="btn-text">Request Your Virgilian Lot</span>
-            <span class="btn-icon">📜</span>
+            <span class="btn-text">Consult the Oracle</span>
+            <span class="btn-icon" aria-hidden="true">&#9734;</span>
           </button>
 
           <div id="result" class="result-container hidden">
@@ -43,27 +52,27 @@
           </div>
 
           <div id="loading" class="loading hidden">
-            <div class="spinner"></div>
-            <p>Consulting the ancient text...</p>
+            <div class="spinner" role="status" aria-label="Loading"></div>
+            <p>Consulting the ancient text&hellip;</p>
           </div>
         </section>
 
         <section class="about">
           <h2>About Sortes Vergilianae</h2>
           <p>
-            The <em>Sortes Vergilianae</em> was a form of bibliomancy used in
-            ancient Rome where individuals would seek guidance by randomly
+            The <em>Sortes Vergilianae</em> was a form of bibliomancy practiced
+            in ancient Rome, where seekers would divine guidance by randomly
             selecting passages from Virgil's works, particularly the Aeneid.
           </p>
           <p>
-            Followers believed that the randomly chosen verse would provide
-            insight or prophecy regarding their question or concern.
+            The faithful believed that the chosen verse would illuminate their
+            path, offering prophecy or counsel regarding their deepest concerns.
           </p>
         </section>
       </main>
 
       <footer>
-        <p>&copy; 2025 Virgilian Lots - A tribute to ancient wisdom</p>
+        <p>&copy; 2025 Virgilian Lots &mdash; A tribute to ancient wisdom</p>
       </footer>
     </div>
 
