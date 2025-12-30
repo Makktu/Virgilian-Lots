@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortes Vergilianae - Virgilian Lots</title>
+    <meta
+      name="description"
+      content="Ancient Roman divination using Virgil's Aeneid. Get guidance from randomly selected passages."
+    />
+    <meta name="theme-color" content="#667eea" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Sortes Vergilianae</h1>
+        <p class="subtitle">Virgilian Lots - Ancient Roman Divination</p>
+      </header>
+
+      <main>
+        <section class="intro">
+          <p>
+            Think of a question or issue in your life, then request a random
+            line from Virgil's <em>Aeneid</em> for guidance.
+          </p>
+        </section>
+
+        <section class="divination-section">
+          <button id="getLine" class="btn-primary">
+            <span class="btn-text">Request Your Virgilian Lot</span>
+            <span class="btn-icon">📜</span>
+          </button>
+
+          <div id="result" class="result-container hidden">
+            <div class="verse-display">
+              <p id="verseText" class="verse-text"></p>
+              <div class="verse-info">
+                <span id="bookInfo" class="book-info"></span>
+                <span id="lineInfo" class="line-info"></span>
+              </div>
+            </div>
+          </div>
+
+          <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Consulting the ancient text...</p>
+          </div>
+        </section>
+
+        <section class="about">
+          <h2>About Sortes Vergilianae</h2>
+          <p>
+            The <em>Sortes Vergilianae</em> was a form of bibliomancy used in
+            ancient Rome where individuals would seek guidance by randomly
+            selecting passages from Virgil's works, particularly the Aeneid.
+          </p>
+          <p>
+            Followers believed that the randomly chosen verse would provide
+            insight or prophecy regarding their question or concern.
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Virgilian Lots - A tribute to ancient wisdom</p>
+      </footer>
+    </div>
+
+    <script src="aeneid-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
